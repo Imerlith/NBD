@@ -1,0 +1,3 @@
+1. match (n:Movie) return n
+2. match (n:Person) -[m:ACTED_IN]->(o:Movie) where n.name = "Hugo Weaving" return o
+3. match (n:Person) -[m:ACTED_IN]->(o:Movie) <-[l:DIRECTED]- (p:Person) where n.name = "Hugo Weaving"  return p
