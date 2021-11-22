@@ -1,3 +1,38 @@
 1. match (n:Movie) return n
 2. match (n:Person) -[m:ACTED_IN]->(o:Movie) where n.name = "Hugo Weaving" return o
 3. match (n:Person) -[m:ACTED_IN]->(o:Movie) <-[l:DIRECTED]- (p:Person) where n.name = "Hugo Weaving"  return p
+4. match (n:Person) -[m:ACTED_IN]->(o:Movie) <-[x:ACTED_IN]-(y:Person) where n.name = "Hugo Weaving" return y
+5. match (n:Movie)<-[m:ACTED_IN]-(act:Person)-[x:ACTED_IN]->(y:Movie) where n.title = "The Matrix" return y
+6. match (actor:Person)-[role:ACTED_IN]->(mov:Movie) With actor, count(role) as nOfMovies return actor, nOfMovies
+7. match (o:Person) -[:WROTE]->(m:Movie)<-[:DIRECTED]-(o:Person) return o, m
+8. match (hugo:Person)-[:ACTED_IN]->(m:Movie)<-[:ACTED_IN]-(keanu:Person) where hugo.name = "Hugo Weaving" and keanu.name = "Keanu Reeves" return m
+
+9.
+create (n:Movie {released: 2011, tagline: "Steve Rogers, a rejected military soldier, transforms into Captain America after taking a dose of a Super-Soldier serum. But being Captain America comes at a price as he attempts to take down a war monger and a terrorist organization.", title: "Captain America: The First Avenger"})
+create (n:Person {name: "Chris Evans", born: 1981 })
+create (n:Person {name: "Hayley Atwell", born: 1982 })
+create (n:Person {name: "Joe Johnston", born: 1950 })
+create (n:Person {name: "Christopher Markus", born: 1970 })
+create (n:Person {name: "Stephen McFeely", born: 1969 })
+
+match (m:Movie),(p:Person)
+where m.title = "Captain America: The First Avenger" and p.name = "Chris Evans"
+create (p)-[r:ACTED_IN]->(m)
+
+match (m:Movie),(p:Person)
+where m.title = "Captain America: The First Avenger" and p.name = "Hayley Atwell"
+create (p)-[r:ACTED_IN]->(m)
+
+match (m:Movie),(p:Person)
+where m.title = "Captain America: The First Avenger" and p.name = "Christopher Markus"
+create (p)-[r:WROTE]->(m)
+
+match (m:Movie),(p:Person)
+where m.title = "Captain America: The First Avenger" and p.name = "Stephen McFeely"
+create (p)-[r:WROTE]->(m)
+
+match (m:Movie),(p:Person)
+where m.title = "Captain America: The First Avenger" and p.name = "Joe Johnston"
+create (p)-[r:DIRECTED]->(m)
+
+match (x)-[y]->(m:Movie) where m.title = "Captain America: The First Avenger" return x,y,m
