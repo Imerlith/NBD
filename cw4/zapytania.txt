@@ -1,0 +1,13 @@
+1. match (m:town), (n:peak) where m.name = "Darjeeling" and n.name = "Sandakphu"
+match least = ALLSHORTESTPATHS((m)-[*]->(n)) return least
+2. match (m:town), (n:peak) where m.name = "Darjeeling" and n.name = "Sandakphu"
+match least = ALLSHORTESTPATHS((m)-[*]->(n)) with least where all(r in relationships(least) where r.winter = "true")
+return least
+3.
+    a) match paths = (m:town)-[*]->(n:peak) where m.name = "Darjeeling" and n.name = "Sandakphu"
+    unwind relationships(paths) as rel with paths, collect(rel.distance) as dists
+    with paths, reduce (temp = 0, dist in dists | temp + dist) as distance
+    return paths, distance order by distance asc
+
+    b) match path = (m:town)-[r:twowheeler*]->(n:peak) where m.name = "Darjeeling" and all(rel in relationships(path)
+    where  rel.summer = "true") return n
