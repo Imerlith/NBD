@@ -23,6 +23,14 @@ func main() {
 		readFromRiak(game.Key)
 	}
 	fmt.Println("----------------------")
+	nGame := Game{
+		MetacriticRating: 10.0,
+	}
+	gameToUpdate := games[2]
+	updateRiak(gameToUpdate.Key, nGame)
+	fmt.Println("----------------------")
+	readFromRiak(gameToUpdate.Key)
+	fmt.Println("----------------------")
 	gameToDelete := games[1]
 	deleteFromRiak(gameToDelete.Key)
 	fmt.Println("----------------------")
@@ -76,24 +84,28 @@ func writeToResultFile(path string, header http.Header, body string, stage strin
 }
 
 func insertToRiak(games []*Game) {
-	client := &http.Client{}
 	for _, game := range games {
-		json, err := json.Marshal(game)
-		if err != nil {
-			log.Fatalln(err)
-		}
-		req, err := http.NewRequest(http.MethodPut, uri+game.Key, bytes.NewBuffer(json))
-		if err != nil {
-			log.Fatalln(err)
-		}
-		req.Header.Set("Content-Type", "application/json; charset=utf-8")
-		resp, err := client.Do(req)
-		if err != nil {
-			log.Fatalln(err)
-		}
-		body := bodyToString(resp.Body)
-		writeToResultFile(file_path, resp.Header, body, "Insert")
+		upsertRecordToRiak(*game, game.Key, "Insert")
 	}
+}
+
+func upsertRecordToRiak(game Game, key string, stage string) {
+	client := &http.Client{}
+	json, err := json.Marshal(game)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	req, err := http.NewRequest(http.MethodPut, uri+key, bytes.NewBuffer(json))
+	if err != nil {
+		log.Fatalln(err)
+	}
+	req.Header.Set("Content-Type", "application/json; charset=utf-8")
+	resp, err := client.Do(req)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	body := bodyToString(resp.Body)
+	writeToResultFile(file_path, resp.Header, body, stage)
 }
 
 func readFromRiak(key string) {
@@ -105,6 +117,10 @@ func readFromRiak(key string) {
 	body := bodyToString(resp.Body)
 	fmt.Println(body)
 	writeToResultFile(file_path, resp.Header, body, "Read")
+}
+
+func updateRiak(key string, nGame Game) {
+	upsertRecordToRiak(nGame, key, "Update")
 }
 
 func bodyToString(body io.ReadCloser) string {
@@ -129,4 +145,3 @@ func deleteFromRiak(key string) {
 	fmt.Println(body)
 	writeToResultFile(file_path, resp.Header, body, "Delete")
 }
-
