@@ -1,0 +1,37 @@
+----Insert----
+header: map[Content-Encoding:[gzip] Content-Length:[0] Content-Type:[application/json; charset=utf-8] Date:[Tue, 21 Dec 2021 22:35:06 GMT] Server:[MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)] Vary:[Accept-Encoding]]
+Body: 
+----Insert----
+header: map[Content-Encoding:[gzip] Content-Length:[0] Content-Type:[application/json; charset=utf-8] Date:[Tue, 21 Dec 2021 22:35:06 GMT] Server:[MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)] Vary:[Accept-Encoding]]
+Body: 
+----Insert----
+header: map[Content-Encoding:[gzip] Content-Length:[0] Content-Type:[application/json; charset=utf-8] Date:[Tue, 21 Dec 2021 22:35:06 GMT] Server:[MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)] Vary:[Accept-Encoding]]
+Body: 
+----Insert----
+header: map[Content-Encoding:[gzip] Content-Length:[0] Content-Type:[application/json; charset=utf-8] Date:[Tue, 21 Dec 2021 22:35:06 GMT] Server:[MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)] Vary:[Accept-Encoding]]
+Body: 
+----Insert----
+header: map[Content-Encoding:[gzip] Content-Length:[0] Content-Type:[application/json; charset=utf-8] Date:[Tue, 21 Dec 2021 22:35:06 GMT] Server:[MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)] Vary:[Accept-Encoding]]
+Body: 
+----Read----
+header: map[Content-Type:[application/json; charset=utf-8] Date:[Tue, 21 Dec 2021 22:35:06 GMT] Etag:["1xQS3p1OAFp0zQSWF80LgR"] Last-Modified:[Tue, 21 Dec 2021 22:35:06 GMT] Link:[</buckets/secondtask>; rel="up"] Server:[MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)] Vary:[Accept-Encoding] X-Riak-Vclock:[a85hYGBgzGDKBVI8+xkWvrfK6VsPEUoUzGNlmHXJ7DZfFgA=]]
+Body: {"title":"Sekiro Shadow Dies Twice","year_of_release":2019,"metacritic_rating":8.3,"game_of_the_year":true}
+----Read----
+header: map[Content-Type:[application/json; charset=utf-8] Date:[Tue, 21 Dec 2021 22:35:06 GMT] Etag:["4LQuZAxbuPhrXYCt6nPdaM"] Last-Modified:[Tue, 21 Dec 2021 22:35:06 GMT] Link:[</buckets/secondtask>; rel="up"] Server:[MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)] Vary:[Accept-Encoding] X-Riak-Vclock:[a85hYGBgzGDKBVI8+xkWvrfKPLkeyObKYEpkzGNlmHXJ7DZfFgA=]]
+Body: {"title":"Minecraft","year_of_release":2011,"metacritic_rating":8.2,"game_of_the_year":false}
+----Read----
+header: map[Content-Type:[application/json; charset=utf-8] Date:[Tue, 21 Dec 2021 22:35:06 GMT] Etag:["7VTzFr0sS7XDXyLJaVFFpg"] Last-Modified:[Tue, 21 Dec 2021 22:35:06 GMT] Link:[</buckets/secondtask>; rel="up"] Server:[MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)] Vary:[Accept-Encoding] X-Riak-Vclock:[a85hYGBgzGDKBVI8+xkWvrfKPPsLyGbKYEoUzGNlmHXJ7DZfFgA=]]
+Body: {"title":"Witcher 3 Wild Hunt","year_of_release":2015,"metacritic_rating":9.2,"game_of_the_year":true}
+----Read----
+header: map[Content-Type:[application/json; charset=utf-8] Date:[Tue, 21 Dec 2021 22:35:06 GMT] Etag:["1M84Zz2rtLRgzQme0rZhv0"] Last-Modified:[Tue, 21 Dec 2021 22:35:06 GMT] Link:[</buckets/secondtask>; rel="up"] Server:[MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)] Vary:[Accept-Encoding] X-Riak-Vclock:[a85hYGBgzGDKBVI8+xkWvrfK6VsPZDNlMCUK5rEyzLpkdpsvCwA=]]
+Body: {"title":"Cyberpunk 2077","year_of_release":2020,"metacritic_rating":7.1,"game_of_the_year":false}
+----Read----
+header: map[Content-Type:[application/json; charset=utf-8] Date:[Tue, 21 Dec 2021 22:35:06 GMT] Etag:["20tZDpZYMxQotAqJ19p0kP"] Last-Modified:[Tue, 21 Dec 2021 22:35:06 GMT] Link:[</buckets/secondtask>; rel="up"] Server:[MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)] Vary:[Accept-Encoding] X-Riak-Vclock:[a85hYGBgzGDKBVI8+xkWvrfKuRIBZDNlMCUK5rEyzLpkdpsvCwA=]]
+Body: {"title":"Battlefield 2042","year_of_release":2021,"metacritic_rating":2.2,"game_of_the_year":false}
+----Delete----
+header: map[Content-Encoding:[gzip] Content-Length:[0] Content-Type:[application/json; charset=utf-8] Date:[Tue, 21 Dec 2021 22:35:06 GMT] Server:[MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)] Vary:[Accept-Encoding]]
+Body: 
+----Read----
+header: map[Content-Length:[10] Content-Type:[text/plain] Date:[Tue, 21 Dec 2021 22:35:06 GMT] Server:[MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)] X-Riak-Deleted:[true] X-Riak-Vclock:[a85hYGBgzGDKBVI8+xkWvrfKPLkeyObKYEpkymNlmHXJ7DZfFgA=]]
+Body: not found
+

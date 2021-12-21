@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Sekiro Shadow Dies Twice",
+        "year_of_release": 2019,
+        "metacritic_rating": 8.3,
+        "game_of_the_year": true
+    },
+    {
+        "title": "Minecraft",
+        "year_of_release": 2011,
+        "metacritic_rating": 8.2,
+        "game_of_the_year": false
+    },
+    {
+        "title": "Witcher 3 Wild Hunt",
+        "year_of_release": 2015,
+        "metacritic_rating": 9.2,
+        "game_of_the_year": true
+    },
+    {
+        "title": "Cyberpunk 2077",
+        "year_of_release": 2020,
+        "metacritic_rating": 7.1,
+        "game_of_the_year": false
+    },
+    {
+        "title": "Battlefield 2042",
+        "year_of_release": 2021,
+        "metacritic_rating": 2.2,
+        "game_of_the_year": false
+    }
+]
