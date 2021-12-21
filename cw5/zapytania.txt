@@ -1,0 +1,32 @@
+1.
+    curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Java", released: "1996-01-23", usesSemicolon: true, howManyDevicesRun: 3000000000 }'  http://localhost:8098/buckets/s16540/keys/java
+    curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "C#", released: "2001-08-15", usesSemicolon: true, howManyDevicesRun: 51234123 }'  http://localhost:8098/buckets/s16540/keys/csharp
+    curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Python", released: "1991-02-20", usesSemicolon: false, howManyDevicesRun: 321341256 }'  http://localhost:8098/buckets/s16540/keys/python
+    curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Golang", released: "2009-11-10", usesSemicolon: true, howManyDevicesRun: 351762 }'  http://localhost:8098/buckets/s16540/keys/golang
+    curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Kotlin", released: "2011-07-22", usesSemicolon: false, howManyDevicesRun: 3000000000 }'  http://localhost:8098/buckets/s16540/keys/kotlin
+2.
+    curl -i http://localhost:8098/buckets/s16540/keys/golang
+
+3.
+    curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Java", released: "1996-01-23", usesSemicolon: true, howManyDevicesRun: 3000000000, blockDelimiter: "curlyBraces" }'  http://localhost:8098/buckets/s16540/keys/java
+
+4.
+    curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Golang", released: "2009-11-10", howManyDevicesRun: 351762 }'  http://localhost:8098/buckets/s16540/keys/golang
+
+5.
+    curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Kotlin", released: "2011-07-22", usesSemicolon: true, howManyDevicesRun: 3000000000 }'  http://localhost:8098/buckets/s16540/keys/kotlin
+
+6.
+    curl -i -XDELETE http://localhost:8098/buckets/s16540/keys/python
+
+7.
+    curl -i http://localhost:8098/buckets/s16540/keys/scalla
+
+8.
+    curl -i -XPOST -H "Content-Type: application/json" -d '{"name": "C ++"}'  http://localhost:8098/buckets/s16540/keys/
+
+9.
+    curl -i http://localhost:8098/buckets/s16540/keys/SFEzoIZ3P0OcCXzOUsGgx96Sh9y
+
+10.
+    curl -i -XDELETE http://localhost:8098/buckets/s16540/keys/SFEzoIZ3P0OcCXzOUsGgx96Sh9y

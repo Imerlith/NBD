@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvrfKUYqDCCUy5rEy7FtgdpsvCwA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s16540>; rel="up"
+Last-Modified: Tue, 21 Dec 2021 19:02:22 GMT
+ETag: "7USOSTOP0Crv3qYwEQfICr"
+Date: Tue, 21 Dec 2021 19:03:02 GMT
+Content-Type: application/json
+Content-Length: 91
+
+{"name": "Golang", released: "2009-11-10", usesSemicolon: true, howManyDevicesRun: 351762 }
