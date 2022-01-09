@@ -5,4 +5,6 @@
 
 ### To stop running instance db instance use **stop.sh**
 
+
+### Task 6 requires golang to run
 ### Scala tasks require Scala version >= 3.0
